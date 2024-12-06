@@ -1,0 +1,204 @@
+  
+   
+   
+   /* Reset de márgenes y padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo general del body */
+body {
+  display: flex;
+  justify-content: center;
+  align-items:normal;
+  height: 100vh;
+  
+  font-family: Arial, sans-serif;
+  margin: 0;
+
+}
+
+/* Estilos para el texto animado */
+.animacion-texto {
+  margin-top: 100px;
+  font-size: 2rem;
+  font-weight: bold;
+  white-space: nowrap;
+  color: #333;
+  opacity: 0; /* Inicialmente invisible */
+  transform: translateX(-100%); /* Comienza fuera de la pantalla a la izquierda */
+  animation: aparecer 2s ease-out forwards;
+}
+
+/* Animación de deslizamiento y aparición */
+@keyframes aparecer {
+  0% {
+    opacity: 0; /* Empieza invisible */
+    transform: translateX(-100%); /* Empieza fuera de la pantalla, a la izquierda */
+  }
+  100% {
+    opacity: 1; /* Al final, será completamente visible */
+    transform: translateX(0); /* Se mueve a su posición original */
+  }
+}
+
+
+
+/* menu icono */
+
+/* Reset de márgenes y padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo general del body */
+body {
+  font-family: Arial, sans-serif;
+  
+  padding: 0;
+  margin: 0;
+  background-image: url('img/fondo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+/* Estilo del icono de tres barras */
+.menu-toggle {
+  display: none; /* El checkbox está oculto */
+}
+
+.menu-icon {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 1000; /* Aseguramos que esté sobre otros elementos */
+}
+
+.bar {
+  width: 30px;
+  height: 5px;
+  background-color: #050505;
+  margin: 6px 0;
+  transition: all 0.3s ease;
+}
+
+/* Estilo del menú deslizable */
+.slide-menu {
+  position: fixed;
+  top: 0;
+  left: -250px; /* El menú comienza fuera de la pantalla */
+  width: 250px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  transition: left 0.3s ease; /* Animación de deslizamiento */
+  padding-top: 60px;
+  z-index: 999; /* Aseguramos que el menú esté por encima del contenido */
+}
+
+/* Los enlaces dentro del menú */
+.slide-menu nav a {
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid #444;
+  transition: background-color 0.3s ease;
+}
+
+.slide-menu nav a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Cuando el checkbox está marcado, el menú se desliza */
+.menu-toggle:checked + .menu-icon + .slide-menu {
+  left: 0; /* Mueve el menú a la vista */
+}
+
+/* Transformación del icono de tres barras cuando el menú se abre */
+.menu-toggle:checked + .menu-icon .bar:nth-child(1) {
+  transform: rotate(45deg);
+  position: relative;
+  top: 10px;
+}
+
+.menu-toggle:checked + .menu-icon .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle:checked + .menu-icon .bar:nth-child(3) {
+  transform: rotate(-45deg);
+  position: relative;
+  top: -10px;
+}
+ /* menu superior */
+ .l1{
+  font-family: "Rubik";
+}
+
+header {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px 0;
+  z-index: 1000;
+  text-align: center;
+}
+
+nav .menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav .menu li {
+  margin: 0 20px;
+}
+
+nav .menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.4s;
+}
+
+nav .menu a:hover {
+  color: #f31212;
+}
+
+
+section {
+ padding: 80px 20px;
+  text-align: center;
+   opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+.menu{
+  font-family: Rubik;
+}
+
+/* opcion */
